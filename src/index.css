@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface-2: #1c1c1c;
+  --color-border: #2a2a2a;
+  --color-text: #ededed;
+  --color-muted: #9a9a9a;
+  --color-accent: #c8ff00;
+  --font-sans: ui-sans-system, system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", monospace;
+}
+
+* { scrollbar-width: thin; scrollbar-color: var(--color-border) transparent; }
+body { background: var(--color-bg); color: var(--color-text); font-family: var(--font-sans); }
+
+/* Vey hover — playful bob + eye glow, no layout shift */
+.vey-mascot { cursor: default; display: inline-flex; }
+.vey-mascot:hover .vey-body { animation: vey-bob 0.45s ease; }
+.vey-mascot:hover .vey-antenna { animation: vey-wiggle 0.45s ease; }
+.vey-mascot:hover .vey-eye { filter: drop-shadow(0 0 4px var(--color-accent)); }
+.vey-mascot:hover .vey-feet { animation: vey-tap 0.45s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .vey-mascot:hover .vey-body, .vey-mascot:hover .vey-antenna, .vey-mascot:hover .vey-feet { animation: none; }
+}
+@keyframes vey-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-2px) rotate(-1.5deg); }
+  50% { transform: translateY(0) rotate(1.5deg); }
+  75% { transform: translateY(-1px) rotate(-0.8deg); }
+}
+@keyframes vey-wiggle {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1.2px) rotate(-6deg); transform-origin: 16px 6px; }
+  50% { transform: translateX(1.2px) rotate(6deg); transform-origin: 16px 6px; }
+  75% { transform: translateX(-0.6px) rotate(-3deg); transform-origin: 16px 6px; }
+}
+@keyframes vey-tap {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(0.8px); }
+  60% { transform: translateY(-0.5px); }
+}

@@ -1,0 +1,65 @@
+# No access log: requests aren't recorded. Caddy's own runtime/error log (journald)
+# can still embed the request on errors, so strip client IPs and headers from it.
+{
+	log default {
+		format filter {
+			wrap console
+			fields {
+				request>remote_ip delete
+				request>remote_port delete
+				request>client_ip delete
+				request>headers delete
+			}
+		}
+	}
+}
+
+veyth.eu {
+	encode zstd gzip
+
+	header {
+		# Security
+		X-Frame-Options "DENY"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+	}
+
+	# Ko-fi webhook → server/kofi.mjs (systemd: veyth-kofi)
+	handle /api/kofi {
+		request_body {
+			max_size 64KB
+		}
+		reverse_proxy 127.0.0.1:8787
+	}
+
+	# Funding/supporters written by the webhook. Outside the webroot so rsync --delete can't wipe it.
+	handle_path /live/* {
+		root * /var/lib/veyth/live
+		header Cache-Control "no-cache"
+		file_server
+	}
+
+	# Static site. Must be inside handle: try_files runs before handle in Caddy's
+	# directive order and would otherwise rewrite /api/kofi to /index.html.
+	handle {
+		root * /var/www/veyth
+		# Prerendered route shells (/json → json.html), then SPA fallback
+		try_files {path} {path}.html /index.html
+		# Hashed assets are immutable; html is not
+		# Unhashed icons are excluded so a new favicon reaches returning visitors
+		@static {
+			path *.js *.css *.woff2 *.svg *.png *.webp *.avif
+			not path /favicon.svg /favicon.ico /apple-touch-icon.png
+		}
+		header @static Cache-Control "public, max-age=31536000, immutable"
+		# Sitemap stylesheet: explicit type, since nosniff blocks XSLT served as octet-stream
+		@xsl path *.xsl
+		header @xsl Content-Type "text/xsl; charset=utf-8"
+		file_server
+	}
+}
+
+www.veyth.eu {
+	redir https://veyth.eu{uri} permanent
+}

@@ -1,0 +1,36 @@
+[Unit]
+Description=veyth.eu Ko-fi webhook receiver
+After=network.target
+ConditionPathExists=/etc/veyth/kofi.env
+
+[Service]
+Type=simple
+User=veyth-kofi
+Group=veyth-kofi
+EnvironmentFile=/etc/veyth/kofi.env
+Environment=PORT=8787 STATE_DIR=/var/lib/veyth
+ExecStart=/usr/bin/node /opt/veyth-kofi/kofi.mjs
+Restart=on-failure
+RestartSec=5
+
+# /var/lib/veyth (0755) so Caddy can read live/*.json
+StateDirectory=veyth
+StateDirectoryMode=0755
+UMask=0022
+
+# Hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target

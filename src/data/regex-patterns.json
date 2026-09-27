@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Email (pragmatic)",
+    "pattern": "[\\w.+-]+@[\\w-]+(?:\\.[\\w-]+)+",
+    "flags": "g",
+    "sample": "Contact hello@veyth.eu or first.last+tag@mail.example.co.uk — not @invalid"
+  },
+  {
+    "name": "ISO 8601 date",
+    "pattern": "\\b(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])\\b",
+    "flags": "g",
+    "sample": "Released 2026-09-27, patched 2026-10-03, not 2026-13-40."
+  },
+  {
+    "name": "Semantic version",
+    "pattern": "\\bv?(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-([\\w.-]+))?(?:\\+([\\w.-]+))?\\b",
+    "flags": "g",
+    "sample": "Upgrade from v1.4.2 to 2.0.0-rc.1+build.5 (skip 01.2.3)"
+  },
+  {
+    "name": "IPv4 address",
+    "pattern": "\\b(?:(?:25[0-5]|2[0-4]\\d|1?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1?\\d?\\d)\\b",
+    "flags": "g",
+    "sample": "Hosts: 192.168.1.10, 10.0.0.255 and bogus 999.1.1.1"
+  },
+  {
+    "name": "Hex colour",
+    "pattern": "#(?:[0-9a-fA-F]{3}){1,2}\\b",
+    "flags": "g",
+    "sample": "accent #c8ff00, bg #0a0a0a, short #fff, bad #ggg"
+  },
+  {
+    "name": "URL (http/https)",
+    "pattern": "https?:\\/\\/[^\\s/$.?#].[^\\s]*",
+    "flags": "gi",
+    "sample": "See https://veyth.eu/regex and http://example.com/path?q=1 for details."
+  },
+  {
+    "name": "UUID",
+    "pattern": "\\b[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\\b",
+    "flags": "gi",
+    "sample": "id=3f2b8c1e-9d4a-4c7e-8b1f-2a6d5e9c0f13 ref=not-a-uuid"
+  },
+  {
+    "name": "Trailing whitespace",
+    "pattern": "[ \\t]+$",
+    "flags": "gm",
+    "sample": "line one   \nline two\t\nline three"
+  }
+]

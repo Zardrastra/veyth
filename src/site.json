@@ -1,0 +1,75 @@
+{
+  "site": {
+    "url": "https://veyth.eu",
+    "name": "Veyth",
+    "title": "Veyth — tiny tools, no tracking",
+    "description": "Fast, private, client-side tools for developers and makers. JSON, UUID, regex, JWT & more. No tracking, no upload — everything runs in your browser.",
+    "operator": {
+      "name": "John Dundas",
+      "country": "Ireland",
+      "email": "privacy@sunturtle.eu",
+      "contact": "hello@sunturtle.eu"
+    }
+  },
+  "tools": [
+    {
+      "slug": "json",
+      "nav": "JSON",
+      "title": "JSON Formatter & Validator",
+      "description": "Format, validate, minify & sort keys — with exact error locations, one-click fixes and a tree view. Runs 100% locally.",
+      "keywords": "json formatter validator minify"
+    },
+    {
+      "slug": "uuid",
+      "nav": "UUID & Hash",
+      "title": "UUID Generator & SHA-256 Hash",
+      "description": "Generate v4 & v7 UUIDs in bulk, inspect any UUID, and SHA-256/512 or HMAC hash text and files with Web Crypto.",
+      "keywords": "uuid generator v7 validator sha256 sha512 hmac hash"
+    },
+    {
+      "slug": "regex",
+      "nav": "Regex",
+      "title": "Regex Tester",
+      "description": "Live match highlighting, capture groups and replace preview — with a cheat sheet and a library of common patterns.",
+      "keywords": "regex tester regular expression"
+    },
+    {
+      "slug": "encode",
+      "nav": "Encode",
+      "title": "Base64 & URL Encoder / Decoder",
+      "description": "Encode and decode Base64, Base64URL, URL, Hex and HTML entities — UTF-8 safe, auto-detects encoded input.",
+      "keywords": "base64 encode decode url encoder hex html entities"
+    },
+    {
+      "slug": "jwt",
+      "nav": "JWT",
+      "title": "JWT Decoder",
+      "description": "Decode JSON Web Tokens and verify HS/RS/PS/ES signatures locally — claims explained. Your token never leaves the page.",
+      "keywords": "jwt decoder verify signature json web token"
+    },
+    {
+      "slug": "image",
+      "nav": "Image",
+      "title": "Image Resizer & Converter",
+      "description": "Resize, compress and convert JPG, PNG, WebP & AVIF in bulk — or shrink to a max file size. Nothing is uploaded; EXIF/GPS data is stripped.",
+      "keywords": "image resizer compress image to kb reduce file size convert png to jpg webp avif converter"
+    }
+  ],
+  "pages": [
+    {
+      "path": "/thanks",
+      "title": "Thanks — supporters & contributors",
+      "description": "The people who keep veyth.eu running and the ones who built its tools."
+    },
+    {
+      "path": "/about",
+      "title": "About",
+      "description": "Why veyth.eu exists, who runs it, how the tools work and the promises it keeps: no cookies, no accounts, no uploads."
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy policy",
+      "description": "What veyth.eu does and doesn't collect: no cookies, no analytics, no access logs. Tools run entirely in your browser."
+    }
+  ]
+}

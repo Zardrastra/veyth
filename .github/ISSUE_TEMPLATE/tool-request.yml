@@ -1,0 +1,23 @@
+name: Tool request
+description: Suggest a new tool for veyth.eu — 👍 existing requests to vote
+title: "Tool: "
+labels: ["tool-request"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should it do?
+      description: What would you paste in, and what would you get out?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: When do you reach for this?
+      description: What do you use today, and what's annoying about it?
+  - type: checkboxes
+    id: build
+    attributes:
+      label: Contributing
+      options:
+        - label: I'd like to build this myself (see CONTRIBUTING.md)

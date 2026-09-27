@@ -19,6 +19,7 @@ Thanks for helping! veyth is a set of tiny, private, client-side tools. Contribu
      "title": "Cron Expression Explainer",
      "description": "One sentence — this becomes the page's meta description.",
      "keywords": "cron expression parser",
+     "glyph": "* * *",
      "author": "@your-handle",
      "authorUrl": "https://github.com/your-handle"
    }
@@ -29,7 +30,7 @@ Thanks for helping! veyth is a set of tiny, private, client-side tools. Contribu
    - `useHashState(key, default)` + `<ShareButton params={…}>` — shareable links
    - `<CopyButton>` and `<VeyStatus mood="happy" | "oops" | "idle">`
 
-That's it. Routing, nav, the ⌘K palette, the homepage card, per-page SEO tags, the prerendered HTML and `sitemap.xml` are all generated from `site.json`.
+That's it. Routing, nav, the ⌘K palette, the homepage card, per-page SEO tags, the link-preview image (Vey holding up your `glyph`), the prerendered HTML and `sitemap.xml` are all generated from `site.json`.
 
 ## Smaller contributions
 

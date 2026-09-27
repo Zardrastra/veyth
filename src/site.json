@@ -14,6 +14,7 @@
   "tools": [
     {
       "slug": "json",
+      "glyph": "{ }",
       "nav": "JSON",
       "title": "JSON Formatter & Validator",
       "description": "Format, validate, minify & sort keys — with exact error locations, one-click fixes and a tree view. Runs 100% locally.",
@@ -21,6 +22,7 @@
     },
     {
       "slug": "uuid",
+      "glyph": "#",
       "nav": "UUID & Hash",
       "title": "UUID Generator & SHA-256 Hash",
       "description": "Generate v4 & v7 UUIDs in bulk, inspect any UUID, and SHA-256/512 or HMAC hash text and files with Web Crypto.",
@@ -28,6 +30,7 @@
     },
     {
       "slug": "regex",
+      "glyph": "/.*/",
       "nav": "Regex",
       "title": "Regex Tester",
       "description": "Live match highlighting, capture groups and replace preview — with a cheat sheet and a library of common patterns.",
@@ -35,6 +38,7 @@
     },
     {
       "slug": "encode",
+      "glyph": "%20",
       "nav": "Encode",
       "title": "Base64 & URL Encoder / Decoder",
       "description": "Encode and decode Base64, Base64URL, URL, Hex and HTML entities — UTF-8 safe, auto-detects encoded input.",
@@ -42,6 +46,7 @@
     },
     {
       "slug": "jwt",
+      "glyph": "eyJ…",
       "nav": "JWT",
       "title": "JWT Decoder",
       "description": "Decode JSON Web Tokens and verify HS/RS/PS/ES signatures locally — claims explained. Your token never leaves the page.",
@@ -49,6 +54,7 @@
     },
     {
       "slug": "image",
+      "glyph": "↔",
       "nav": "Image",
       "title": "Image Resizer & Converter",
       "description": "Resize, compress and convert JPG, PNG, WebP & AVIF in bulk — or shrink to a max file size. Nothing is uploaded; EXIF/GPS data is stripped.",
@@ -56,6 +62,7 @@
     },
     {
       "slug": "color",
+      "glyph": "#c8ff00",
       "nav": "Color",
       "title": "Color Picker from Image",
       "description": "Pick a color from any photo with a zoom dropper, then fine-tune the match in a honeycomb of nearby shades. HEX, RGB, HSL, OKLCH & CMYK — the photo is never uploaded.",

@@ -27,6 +27,8 @@ Also on the site:
 - **Local-first.** Tools work on your data in the page itself; files and tokens never leave your device.
 - **No tracking.** No cookies, no analytics, no access logs. The server's error log has client IPs and headers stripped.
 - **Small and fast.** A static site with no backend or database; each tool is prerendered as its own page.
+
+**Link previews:** at build time each page gets a 1200×630 Open Graph image of Vey the mascot next to its title (`scripts/og.ts`, rendered with resvg and the bundled Inter in `scripts/og-fonts/`). Files are content-hashed (`/og/json.<hash>.png`) because Caddy caches PNGs as immutable.
 - **Community-shaped.** New tools come from requests and contributions.
 
 ## Stack
@@ -42,7 +44,7 @@ pnpm run build        # tsc + vite → dist/
 pnpm run preview
 ```
 
-**Adding a tool:** add an entry to `src/site.json` and create `src/pages/tools/<slug>.tsx`. The router, nav, ⌘K palette, homepage, per-page meta, prerendered `dist/<slug>.html` and `sitemap.xml` are all generated from `site.json`. See `CONTRIBUTING.md` for details.
+**Adding a tool:** add an entry to `src/site.json` and create `src/pages/tools/<slug>.tsx`. The router, nav, ⌘K palette, homepage, per-page meta, prerendered `dist/<slug>.html`, link-preview images and `sitemap.xml` are all generated from `site.json`. See `CONTRIBUTING.md` for details.
 
 ## Contributing & requesting tools
 

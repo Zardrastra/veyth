@@ -53,6 +53,13 @@
       "title": "Image Resizer & Converter",
       "description": "Resize, compress and convert JPG, PNG, WebP & AVIF in bulk — or shrink to a max file size. Nothing is uploaded; EXIF/GPS data is stripped.",
       "keywords": "image resizer compress image to kb reduce file size convert png to jpg webp avif converter"
+    },
+    {
+      "slug": "color",
+      "nav": "Color",
+      "title": "Color Picker from Image",
+      "description": "Pick a color from any photo with a zoom dropper, then fine-tune the match in a honeycomb of nearby shades. HEX, RGB, HSL, OKLCH & CMYK — the photo is never uploaded.",
+      "keywords": "color picker from image eyedropper photo hex rgb hsl oklch color matcher find color code"
     }
   ],
   "pages": [

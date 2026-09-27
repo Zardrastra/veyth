@@ -12,6 +12,7 @@ Fast, private tools for developers and makers. Everything runs in your browser: 
 | `/encode` | Base64 & URL Encoder / Decoder | Base64, Base64URL, URL, Hex and HTML entities — UTF-8 safe, auto-detects encoded input |
 | `/jwt` | JWT Decoder | Decode tokens and verify HS/RS/PS/ES signatures locally, with claims explained; hand off to the JSON tool |
 | `/image` | Image Resizer & Converter | Resize, compress and convert JPG/PNG/WebP/AVIF in bulk or to a max file size; strips EXIF/GPS, zip download |
+| `/color` | Color Picker from Image | Sample a color from a photo with a zoom dropper (1 px to 9×9 average), refine it in a honeycomb of nearby shades, copy HEX/RGB/HSL/HSB/OKLCH/CMYK |
 
 Also on the site:
 

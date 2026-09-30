@@ -67,6 +67,14 @@
       "title": "Color Picker from Image",
       "description": "Pick a color from any photo with a zoom dropper, then fine-tune the match in a honeycomb of nearby shades. HEX, RGB, HSL, OKLCH & CMYK — the photo is never uploaded.",
       "keywords": "color picker from image eyedropper photo hex rgb hsl oklch color matcher find color code"
+    },
+    {
+      "slug": "split",
+      "glyph": "÷",
+      "nav": "Split bill",
+      "title": "Bill Split & Tip Calculator",
+      "description": "Split a bill evenly or by what everyone ordered — tip, tax and shared dishes included, down to the exact cent. Share one link with the whole table.",
+      "keywords": "split the bill calculator tip calculator restaurant bill splitter who owes what split check"
     }
   ],
   "pages": [

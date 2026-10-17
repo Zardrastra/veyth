@@ -9,7 +9,7 @@ User=veyth-kofi
 Group=veyth-kofi
 EnvironmentFile=/etc/veyth/kofi.env
 Environment=PORT=8787 STATE_DIR=/var/lib/veyth
-ExecStart=/usr/bin/node /opt/veyth-kofi/kofi.mjs
+ExecStart=/opt/veyth-apps/bin/veyth-kofi
 Restart=on-failure
 RestartSec=5
 
@@ -30,6 +30,7 @@ ProtectControlGroups=yes
 RestrictAddressFamilies=AF_INET AF_INET6
 RestrictNamespaces=yes
 LockPersonality=yes
+MemoryDenyWriteExecute=yes
 MemoryMax=128M
 
 [Install]

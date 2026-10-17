@@ -27,3 +27,6 @@ vite.config.js
 vite.config.d.ts
 scripts/**/*.js
 scripts/**/*.d.ts
+
+# Go binaries
+server/kofi-receiver/veyth-kofi*

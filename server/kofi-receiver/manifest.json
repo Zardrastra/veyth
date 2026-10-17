@@ -1,0 +1,18 @@
+{
+  "bundle": "veyth-apps",
+  "version": "1.0.0",
+  "target": "linux-amd64",
+  "updated": "2026-10-18T00:30:00Z",
+  "binaries": {
+    "authelia": {
+      "version": "4.39.28",
+      "sha256": "630eb1abb0dfb41d645eb6e633b7052b2d90b96bb83e7f2e9e63246ac07fec8b",
+      "upstream": "https://github.com/authelia/authelia/releases/download/v4.39.28/authelia-v4.39.28-linux-amd64.tar.gz"
+    },
+    "veyth-kofi": {
+      "version": "1.0.0",
+      "sha256": "6ebaba2a8e06424297182406ff43550de1873f089ffcd84a6f4e0d9aaaa88455",
+      "source": "server/kofi-receiver"
+    }
+  }
+}

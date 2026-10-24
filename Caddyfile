@@ -25,7 +25,7 @@ veyth.eu {
 		Permissions-Policy "camera=(), microphone=(), geolocation=()"
 	}
 
-	# Ko-fi webhook → server/kofi.mjs (systemd: veyth-kofi)
+	# Ko-fi webhook → server/kofi-receiver (Go, systemd: veyth-kofi)
 	handle /api/kofi {
 		request_body {
 			max_size 64KB
@@ -63,3 +63,7 @@ veyth.eu {
 www.veyth.eu {
 	redir https://veyth.eu{uri} permanent
 }
+
+# Site snippets owned elsewhere: auth.caddy (Apollo modules/authelia), docs.caddy + shadow.caddy (Apollo labs_host),
+# trovia.caddy (trovia repo). Without this line a deploy of this file would take Authelia, docs and Trovia offline.
+import /etc/caddy/conf.d/*.caddy
